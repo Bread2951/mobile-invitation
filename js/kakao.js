@@ -6,30 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function shareKakao() {
 
-    const currentUrl = window.location.origin + window.location.pathname;
+    Kakao.Share.sendScrap({
 
-    Kakao.Share.sendDefault({
-        objectType: "feed",
+        requestUrl: "https://bread2951.github.io/mobile-invitation/"
 
-        content: {
-            title: "황영환 ♥ 이미선 결혼식",
-            description: "2026년 9월 20일 오전 11시\n광명무역센터컨벤션 3F 그랜드볼룸",
-            imageUrl: currentUrl.replace(/\/$/, "") + "/images/hero.jpg",
-            link: {
-                mobileWebUrl: currentUrl,
-                webUrl: currentUrl
-            }
-        },
-
-        buttons: [
-            {
-                title: "청첩장 보기",
-                link: {
-                    mobileWebUrl: currentUrl,
-                    webUrl: currentUrl
-                }
-            }
-        ]
     });
 
 }
