@@ -1,0 +1,25 @@
+@keyframes heroZoom{
+  from{
+    transform:scale(1.12);
+  }
+  to{
+    transform:scale(1.05);
+  }
+}
+
+@keyframes scrollLine{
+  0%{
+    transform:scaleY(0);
+    transform-origin:top;
+    opacity:0;
+  }
+  50%{
+    transform:scaleY(1);
+    opacity:1;
+  }
+  100%{
+    transform:scaleY(0);
+    transform-origin:bottom;
+    opacity:0;
+  }
+}
