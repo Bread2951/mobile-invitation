@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+    
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>우리의 결혼식</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/sections.css">
@@ -23,6 +30,8 @@
 <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
     ♫
 </button>
+
+<div class="page">
 
 <section class="hero">
   <img src="images/hero.jpg" class="hero-image">
@@ -134,15 +143,32 @@
 </div>
 
     <div class="map-buttons">
-  <a class="btn" href="https://map.kakao.com/link/search/광명무역센터컨벤션" target="_blank">카카오맵</a>
-  <a class="btn" href="https://map.naver.com/p/search/광명무역센터컨벤션" target="_blank">네이버지도</a>
-  <button class="btn" onclick="copyAddress()">주소 복사</button>
+  <a class="btn" href="...">
+    <i class="fa-solid fa-location-dot"></i>
+    카카오맵
+</a>
+  <a class="btn" href="...">
+    <i class="fa-solid fa-map-location-dot"></i>
+    네이버지도
+</a>
+  <button class="btn" onclick="copyAddress()">
+    <i class="fa-regular fa-copy"></i>
+    주소 복사
+</button>
+
+<button class="btn" onclick="shareKakao()">
+    <i class="fa-solid fa-comment"></i>
+    카카오톡으로 공유하기
+</button>
+
 </div>
   </div>
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
+</div>
+
 </div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -153,6 +179,7 @@
 <script src="js/music.js"></script>
 <script src="js/effects.js"></script>
 <script src="js/map.js"></script>
+<script src="js/kakao.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
