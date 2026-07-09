@@ -11,4 +11,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ddayElement.innerText =
     days > 0 ? `D-${days}` : days === 0 ? "D-DAY" : `D+${Math.abs(days)}`;
-});
+}); 

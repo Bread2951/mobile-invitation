@@ -140,33 +140,84 @@
     <p id="address">경기도 광명시 일직로 72 광명무역센터 3층</p>
 
     <div class="map-frame">
-  <iframe
-    src="https://www.google.com/maps?q=광명무역센터컨벤션&output=embed"
-    loading="lazy">
-  </iframe>
-</div>
+      <iframe
+        src="https://www.google.com/maps?q=광명무역센터컨벤션&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
 
     <div class="map-buttons">
-  <a class="btn" href="...">
-    <i class="fa-solid fa-location-dot"></i>
-    카카오맵
-</a>
-  <a class="btn" href="...">
-    <i class="fa-solid fa-map-location-dot"></i>
-    네이버지도
-</a>
-  <button class="btn" onclick="copyAddress()">
-    <i class="fa-regular fa-copy"></i>
-    주소 복사
-</button>
+      <a class="btn" href="https://map.kakao.com/link/search/광명무역센터컨벤션" target="_blank">
+        <i class="fa-solid fa-location-dot"></i>
+        카카오맵
+      </a>
 
-<button class="btn" onclick="shareKakao()">
+      <a class="btn" href="https://map.naver.com/p/search/광명무역센터컨벤션" target="_blank">
+        <i class="fa-solid fa-map-location-dot"></i>
+        네이버지도
+      </a>
+
+      <button class="btn" onclick="copyAddress()">
+        <i class="fa-regular fa-copy"></i>
+        주소 복사
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="account">
+  <p class="section-label">ACCOUNT</p>
+  <h2>마음 전하실 곳</h2>
+
+  <div class="account-card card">
+    <div class="account-row">
+      <div>
+        <p class="account-title">신랑측</p>
+        <p class="account-info">기업은행 131-087766-02-014</p>
+        <p class="account-name">예금주 황영환</p>
+      </div>
+      <button class="copy-btn" onclick="copyText('기업은행 131-087766-02-014')">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+    </div>
+
+    <div class="account-row">
+      <div>
+        <p class="account-title">신부측</p>
+        <p class="account-info">신한은행 110-457-863761</p>
+        <p class="account-name">예금주 이미선</p>
+      </div>
+      <button class="copy-btn" onclick="copyText('신한은행 110-457-863761')">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="contact" data-aos="fade-up">
+  <p class="section-label">CONTACT</p>
+  <h2>연락하기</h2>
+
+  <div class="contact-card card">
+    <a class="btn" href="tel:010-3322-2951">
+      <i class="fa-solid fa-phone"></i>
+      신랑에게 전화하기
+    </a>
+
+    <a class="btn" href="tel:010-9639-7733">
+      <i class="fa-solid fa-phone"></i>
+      신부에게 전화하기
+    </a>
+  </div>
+</section>
+
+<section class="share-section">
+  <p class="share-text">소중한 분들께 청첩장을 공유해 주세요</p>
+
+  <button class="btn share-btn" onclick="shareKakao()">
     <i class="fa-solid fa-comment"></i>
     카카오톡으로 공유하기
-</button>
-
-</div>
-  </div>
+  </button>
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">

@@ -572,3 +572,116 @@ body{
     font-size:15px;
 
 }
+
+.account{
+  text-align:center;
+  background:var(--bg);
+}
+
+.account-card{
+  max-width:460px;
+  margin:0 auto;
+  padding:20px;
+}
+
+.account-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:18px 6px;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+}
+
+.account-row:last-child{
+  border-bottom:none;
+}
+
+.account-title{
+  font-size:14px;
+  color:var(--point);
+  margin-bottom:6px;
+}
+
+.account-info{
+  font-size:16px;
+  color:var(--text);
+  line-height:1.7;
+}
+
+.account-name{
+  font-size:14px;
+  color:var(--sub);
+}
+
+.copy-btn{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#f3e1d2;
+  color:#6b4b35;
+  font-size:16px;
+  cursor:pointer;
+  flex-shrink:0;
+}
+
+.account,
+.share-section{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* 계좌 제목과 박스 사이 간격 */
+.account h2{
+  margin-bottom: 24px;
+}
+
+/* 계좌 박스와 공유 버튼 사이 간격 */
+.account{
+  padding-bottom: 30px !important;
+}
+
+.share-section{
+  padding-top: 10px !important;
+}
+
+.contact{
+  text-align:center;
+  background:var(--bg);
+  padding-top:40px !important;
+  padding-bottom:30px !important;
+}
+
+.contact-card{
+  max-width:460px;
+  margin:0 auto;
+  padding:22px;
+  display:grid;
+  gap:12px;
+}
+
+/* 연락하기 제목과 박스 사이 간격 */
+.contact h2{
+    margin-bottom: 24px;
+}
+
+.share-section{
+  text-align:center;
+  padding:30px 20px 90px !important;
+  background:var(--bg);
+}
+
+.share-text{
+  font-size:15px;
+  color:var(--sub);
+  margin-bottom:18px;
+  font-family:'Gowun Batang', serif;
+}
+
+.share-btn{
+  max-width:460px;
+  margin:0 auto;
+}
