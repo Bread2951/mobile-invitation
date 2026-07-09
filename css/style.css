@@ -464,41 +464,6 @@ section{
   }
 }
 
-.petals{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  pointer-events:none;
-  z-index:9999;
-  overflow:hidden;
-}
-
-.petal{
-  position:fixed;
-  top:-40px;
-  left:0;
-  line-height:1;
-  font-size:18px;
-  opacity:.75;
-  animation-name:fall;
-  animation-timing-function:linear;
-  animation-fill-mode:forwards;
-}
-
-@keyframes fall{
-  0%{
-    transform:translateY(-40px) rotate(0deg);
-    opacity:.8;
-  }
-
-  100%{
-    transform:translateY(110vh) rotate(360deg);
-    opacity:0;
-  }
-}
-
 .music-btn{
   position:fixed;
   right:18px;
