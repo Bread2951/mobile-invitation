@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isPlaying) {
       bgm.play().then(() => {
         btn.classList.add("playing");
-        btn.innerText = "♪";
         isPlaying = true;
       }).catch((error) => {
         alert("음악 재생 실패: " + error.message);
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       bgm.pause();
       btn.classList.remove("playing");
-      btn.innerText = "♫";
       isPlaying = false;
     }
   };
