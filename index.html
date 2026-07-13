@@ -2,235 +2,334 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>우리의 결혼식</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3ee">
 
-  <meta property="og:title" content="황영환 ♥ 이미선 결혼식">
-  <meta property="og:description" content="2026년 9월 20일 오전 11시 · 광명무역센터컨벤션 3F">
-  <meta property="og:image" content="https://bread2951.github.io/mobile-invitation/images/hero.jpg">
-  <meta property="og:url" content="https://bread2951.github.io/mobile-invitation/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bread2951.github.io/mobile-invitation/images/hero.jpg">
+  <title>황영환 ♥ 이미선 결혼합니다</title>
+  <meta name="description" content="2026년 9월 20일 오전 11시, 황영환과 이미선의 결혼식에 초대합니다.">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="황영환 ♥ 이미선 결혼합니다">
+  <meta property="og:description" content="2026년 9월 20일 오전 11시 · 광명무역센터컨벤션">
+  <meta property="og:image" content="images/og-image.jpg">
 
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Serif+Display&family=Gowun+Batang:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
+  <div class="page-shell">
 
-<audio id="bgm" loop>
-  <source src="music/bgm.mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-  <i class="fa-solid fa-music"></i>
-</button>
-
-<div class="page">
-
-  <section class="hero">
-    <img src="images/hero.jpg" class="hero-image" alt="Wedding main image">
-    <div class="overlay"></div>
-
-    <div class="hero-text">
-      <p class="small-title">WE ARE GETTING MARRIED</p>
-      <h1>황영환 <span>♥</span> 이미선</h1>
-      <p class="date">2026.09.20 SUN · AM 11:00</p>
-    </div>
-
-    <div class="scroll-down">
-      <span>SCROLL</span>
-      <div class="line"></div>
-    </div>
-  </section>
-
-  <section class="intro">
-    <p class="section-label">INVITATION</p>
-    <h2>소중한 분들을 초대합니다</h2>
-    <p>
-      서로가 마주 보며 다져온 사랑을<br>
-      이제 함께 한 곳을 바라보며<br>
-      걸어가고자 합니다.
-    </p>
-    <p>
-      저희의 시작을 함께 축복해 주세요.
-    </p>
-  </section>
-
-  <section class="premium-gallery">
-    <p class="section-label">GALLERY</p>
-    <h2>우리의 순간들</h2>
-
-    <div class="swiper gallerySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/gallery1.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 1"></div>
-        <div class="swiper-slide"><img src="images/gallery2.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 2"></div>
-        <div class="swiper-slide"><img src="images/gallery3.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 3"></div>
-        <div class="swiper-slide"><img src="images/gallery4.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 4"></div>
-        <div class="swiper-slide"><img src="images/gallery5.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 5"></div>
-        <div class="swiper-slide"><img src="images/gallery6.jpg" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery 6"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="couple">
-    <p class="section-label">BRIDE & GROOM</p>
-    <h2>두 사람을 소개합니다</h2>
-
-    <div class="couple-wrap">
-      <div class="person-card card">
-        <img src="images/groom.jpg" alt="Groom">
-        <p class="role">GROOM</p>
-        <h3>황 영 환</h3>
-        <p>황동현 · 홍명숙의 장남</p>
-      </div>
-
-      <div class="person-card card">
-        <img src="images/bride.jpg" alt="Bride">
-        <p class="role">BRIDE</p>
-        <h3>이 미 선</h3>
-        <p>故이경배 · 박성진의 차녀</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wedding-date">
-    <p class="section-label">WEDDING DAY</p>
-    <h2>2026년 9월 20일 일요일</h2>
-
-    <div class="calendar-box">
-      <div class="calendar-month">SEPTEMBER</div>
-
-      <div class="calendar-days">
-        <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
-        <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
-        <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
-        <span class="heart-day">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
-        <span>27</span><span>28</span><span>29</span><span>30</span>
-      </div>
-    </div>
-
-    <p class="dday" id="dday">D-DAY</p>
-  </section>
-
-  <section class="location">
-    <p class="section-label">LOCATION</p>
-    <h2>오시는 길</h2>
-
-    <div class="location-card card">
-      <h3>광명무역센터컨벤션</h3>
-      <p>3F 그랜드볼룸홀</p>
-      <p id="address">경기도 광명시 일직로 72 광명무역센터 3층</p>
-
-      <div class="map-frame">
-        <iframe
-          src="https://www.google.com/maps?q=광명무역센터컨벤션&output=embed"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <div class="map-buttons">
-        <a class="btn" href="https://map.kakao.com/link/search/광명무역센터컨벤션" target="_blank">
-          <i class="fa-solid fa-location-dot"></i>
-          카카오맵
-        </a>
-
-        <a class="btn" href="https://map.naver.com/p/search/광명무역센터컨벤션" target="_blank">
-          <i class="fa-solid fa-map-location-dot"></i>
-          네이버지도
-        </a>
-
-        <button class="btn" onclick="copyAddress()">
-          <i class="fa-regular fa-copy"></i>
-          주소 복사
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="account">
-    <p class="section-label">ACCOUNT</p>
-    <h2>마음 전하실 곳</h2>
-
-    <div class="account-card card">
-      <div class="account-row">
-        <div>
-          <p class="account-title">신랑측</p>
-          <p class="account-info">기업은행 131-087766-02-014</p>
-          <p class="account-name">예금주 황영환</p>
-        </div>
-        <button class="copy-btn" onclick="copyText('기업은행 131-087766-02-014')">
-          <i class="fa-regular fa-copy"></i>
-        </button>
-      </div>
-
-      <div class="account-row">
-        <div>
-          <p class="account-title">신부측</p>
-          <p class="account-info">신한은행 110-457-863761</p>
-          <p class="account-name">예금주 이미선</p>
-        </div>
-        <button class="copy-btn" onclick="copyText('신한은행 110-457-863761')">
-          <i class="fa-regular fa-copy"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <p class="section-label">CONTACT</p>
-    <h2>연락하기</h2>
-
-    <div class="contact-card card">
-      <a class="btn" href="tel:010-3322-2951">
-        <i class="fa-solid fa-phone"></i>
-        신랑에게 전화하기
-      </a>
-
-      <a class="btn" href="tel:010-9639-7733">
-        <i class="fa-solid fa-phone"></i>
-        신부에게 전화하기
-      </a>
-    </div>
-  </section>
-
-  <section class="share-section">
-    <p class="share-text">소중한 분들께 청첩장을 공유해 주세요</p>
-
-    <button class="btn share-btn" onclick="shareKakao()">
-      <i class="fa-solid fa-comment"></i>
-      카카오톡으로 공유하기
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="배경음악 재생">
+      <span class="music-icon">♪</span>
     </button>
-  </section>
 
-<footer class="footer">
-  <p>황영환 ♥ 이미선</p>
-  <span>2026.09.20 · 광명무역센터컨벤션</span>
-</footer>
+    <audio id="bgMusic" loop preload="metadata">
+      <source src="music/bgm.mp3" type="audio/mpeg">
+    </audio>
 
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" alt="Gallery Image">
+    <main>
+
+      <!-- HERO + INVITATION COVER -->
+      <div class="hero-stack">
+
+        <section class="hero section-dark" id="home">
+          <img
+            src="images/hero.jpg"
+            alt="황영환 이미선 웨딩사진"
+            class="hero-image"
+          >
+
+          <div class="hero-shade"></div>
+
+          <div class="hero-menu">•••</div>
+
+          <div class="hero-title-wrap">
+            <div class="hero-line hero-line-first">
+              <span class="hero-script-word">Our</span>
+              <span class="hero-love-word">Love</span>
+            </div>
+
+            <div class="hero-begins-word">Begins</div>
+
+            <div class="hero-caption">
+              <span>FROM</span>
+              <span>NOW</span>
+              <span>ON</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section invitation hero-cover" id="invitation">
+          <div class="section-inner narrow reveal">
+            <p class="section-kicker">INVITATION</p>
+
+            <h2 class="section-title">
+              소중한 분들을 초대합니다
+            </h2>
+
+            <div class="flower-mark">✦</div>
+
+            <p class="invitation-text">
+              서로를 바라보던 반짝이는 눈빛을<br>
+              지나치지 않고 인연으로 간직해 온 3년,<br>
+              이제는 평생 서로를 소중히 여기고자 합니다.
+              <br><br>
+              뜻깊은 날에 함께 축복해 주신다면<br>
+              더없는 행복으로 여기며 살아가도록 하겠습니다.
+            </p>
+
+            <div class="couple-line">
+              <div>
+                <span class="family">황○○ · 김○○의 장남</span>
+                <strong>황영환</strong>
+              </div>
+
+              <span class="heart">♥</span>
+
+              <div>
+                <span class="family">이○○ · 박○○의 장녀</span>
+                <strong>이미선</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- PORTRAIT -->
+      <section class="section portrait-section">
+        <div class="section-inner reveal">
+          <figure class="editorial-photo">
+            <img src="images/couple.jpg" alt="신랑 황영환과 신부 이미선">
+            <figcaption>
+              <span>THE BEGINNING OF OUR FOREVER</span>
+              <span>2026</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- DATE -->
+      <section class="section date-section" id="date">
+        <div class="section-inner narrow reveal">
+          <p class="section-kicker">WEDDING DAY</p>
+          <h2 class="date-display">SEPTEMBER 20</h2>
+          <p class="date-sub">2026년 9월 20일 일요일 오전 11시</p>
+
+          <div class="calendar">
+            <div class="calendar-head">
+              <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span>
+              <span>THU</span><span>FRI</span><span>SAT</span>
+            </div>
+
+            <div class="calendar-grid">
+              <span class="muted">30</span><span class="muted">31</span>
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+              <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+              <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+              <span class="wedding-day">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+              <span>27</span><span>28</span><span>29</span><span>30</span>
+              <span class="muted">1</span><span class="muted">2</span><span class="muted">3</span>
+            </div>
+          </div>
+
+          <div class="countdown" id="countdown">
+            <div><strong id="days">0</strong><span>DAYS</span></div>
+            <i>:</i>
+            <div><strong id="hours">0</strong><span>HOURS</span></div>
+            <i>:</i>
+            <div><strong id="minutes">0</strong><span>MIN</span></div>
+            <i>:</i>
+            <div><strong id="seconds">0</strong><span>SEC</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section gallery-section" id="gallery">
+        <div class="section-inner reveal">
+          <p class="section-kicker">GALLERY</p>
+          <h2 class="section-title">우리의 빛나는 순간</h2>
+
+          <div class="gallery-grid">
+            <button class="gallery-item tall" data-index="0"><img src="images/gallery-01.jpg" alt="웨딩사진 1"></button>
+            <button class="gallery-item" data-index="1"><img src="images/gallery-02.jpg" alt="웨딩사진 2"></button>
+            <button class="gallery-item" data-index="2"><img src="images/gallery-03.jpg" alt="웨딩사진 3"></button>
+            <button class="gallery-item wide" data-index="3"><img src="images/gallery-04.jpg" alt="웨딩사진 4"></button>
+            <button class="gallery-item" data-index="4"><img src="images/gallery-05.jpg" alt="웨딩사진 5"></button>
+            <button class="gallery-item tall" data-index="5"><img src="images/gallery-06.jpg" alt="웨딩사진 6"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact-section" id="contact">
+        <div class="section-inner narrow reveal">
+          <p class="section-kicker">CONTACT</p>
+          <h2 class="section-title">마음을 전해 주세요</h2>
+          <p class="section-desc">축하의 마음을 전화나 메시지로 전해 주세요.</p>
+
+          <div class="contact-card">
+            <div class="contact-row">
+              <div>
+                <span>신랑</span>
+                <strong>황영환</strong>
+              </div>
+              <div class="contact-actions">
+                <a href="tel:01000000000">전화</a>
+                <a href="sms:01000000000">문자</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div>
+                <span>신부</span>
+                <strong>이미선</strong>
+              </div>
+              <div class="contact-actions">
+                <a href="tel:01000000000">전화</a>
+                <a href="sms:01000000000">문자</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="text-button" type="button" data-modal-open="familyContactModal">
+            혼주에게 연락하기
+          </button>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="section location-section" id="location">
+        <div class="section-inner reveal">
+          <p class="section-kicker">LOCATION</p>
+          <h2 class="section-title">오시는 길</h2>
+
+          <div class="location-heading">
+            <strong>광명무역센터컨벤션</strong>
+            <span>3F 그랜드볼룸홀</span>
+            <p>경기도 광명시 일직로 72</p>
+          </div>
+
+          <div class="map-placeholder">
+            <div>
+              <span class="map-pin">●</span>
+              <strong>광명무역센터컨벤션</strong>
+              <small>지도 연결 영역</small>
+            </div>
+          </div>
+
+          <div class="map-buttons">
+            <a href="https://map.naver.com/p/search/%EA%B4%91%EB%AA%85%EB%AC%B4%EC%97%AD%EC%84%BC%ED%84%B0%EC%BB%A8%EB%B2%A4%EC%85%98" target="_blank" rel="noopener">네이버 지도</a>
+            <a href="https://map.kakao.com/link/search/%EA%B4%91%EB%AA%85%EB%AC%B4%EC%97%AD%EC%84%BC%ED%84%B0%EC%BB%A8%EB%B2%A4%EC%85%98" target="_blank" rel="noopener">카카오맵</a>
+            <button id="copyAddress" type="button">주소 복사</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOUNT -->
+      <section class="section account-section" id="account">
+        <div class="section-inner narrow reveal">
+          <p class="section-kicker">FOR YOUR HEART</p>
+          <h2 class="section-title">마음 전하실 곳</h2>
+
+          <div class="accordion-list">
+            <div class="accordion">
+              <button class="accordion-head" type="button">
+                <span>신랑측 계좌번호</span><i>＋</i>
+              </button>
+              <div class="accordion-body">
+                <div class="account-row">
+                  <p><span>신랑 황영환</span><strong>○○은행 000-0000-0000</strong></p>
+                  <button class="copy-account" data-copy="○○은행 000-0000-0000">복사</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button class="accordion-head" type="button">
+                <span>신부측 계좌번호</span><i>＋</i>
+              </button>
+              <div class="accordion-body">
+                <div class="account-row">
+                  <p><span>신부 이미선</span><strong>○○은행 000-0000-0000</strong></p>
+                  <button class="copy-account" data-copy="○○은행 000-0000-0000">복사</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section class="closing section-dark">
+        <img src="images/closing.jpg" alt="웨딩사진" class="closing-image">
+        <div class="closing-shade"></div>
+
+        <div class="closing-content reveal">
+          <p class="hero-script-closing">Thank you</p>
+          <h2>소중한 날,<br>함께해 주셔서 감사합니다.</h2>
+          <p>황영환 · 이미선 올림</p>
+        </div>
+      </section>
+
+      <section class="share-section">
+        <button id="kakaoShare" type="button">카카오톡으로 공유하기</button>
+        <button id="copyUrl" type="button">청첩장 주소 복사</button>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>YOUNG HWAN &amp; MI SUN</p>
+      <small>2026. 09. 20</small>
+    </footer>
+
   </div>
 
-</div>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button">×</button>
+    <button class="lightbox-prev" type="button">‹</button>
+    <img src="" alt="확대된 웨딩사진" id="lightboxImage">
+    <button class="lightbox-next" type="button">›</button>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <div class="modal" id="familyContactModal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-modal-close>×</button>
+      <h3>혼주에게 연락하기</h3>
 
-<script src="js/countdown.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/music.js"></script>
-<script src="js/map.js"></script>
-<script src="js/kakao.js"></script>
-<script src="js/script.js"></script>
+      <div class="family-contact-list">
+        <div><span>신랑 아버지</span><strong>황○○</strong><a href="tel:01000000000">전화</a><a href="sms:01000000000">문자</a></div>
+        <div><span>신랑 어머니</span><strong>김○○</strong><a href="tel:01000000000">전화</a><a href="sms:01000000000">문자</a></div>
+        <div><span>신부 아버지</span><strong>이○○</strong><a href="tel:01000000000">전화</a><a href="sms:01000000000">문자</a></div>
+        <div><span>신부 어머니</span><strong>박○○</strong><a href="tel:01000000000">전화</a><a href="sms:01000000000">문자</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">복사되었습니다.</div>
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/kakao.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

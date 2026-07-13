@@ -1,23 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-  function createPetal(){
-    const petals = document.getElementById("petals");
+(() => {
+  document.querySelectorAll(".accordion-head").forEach(button => {
+    button.addEventListener("click", () => {
+      button.closest(".accordion").classList.toggle("open");
+    });
+  });
 
-    if (!petals) return;
+  document.querySelectorAll("[data-modal-open]").forEach(button => {
+    button.addEventListener("click", () => {
+      const modal = document.getElementById(button.dataset.modalOpen);
+      if (!modal) return;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
 
-    const petal = document.createElement("span");
-
-    petal.className = "petal";
-    petal.innerText = "🌸";
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.animationDuration = (6 + Math.random() * 5) + "s";
-    petal.style.fontSize = (12 + Math.random() * 10) + "px";
-
-    petals.appendChild(petal);
-
-    setTimeout(() => {
-      petal.remove();
-    }, 11000);
-  }
-
-  setInterval(createPetal, 900);
-});
+  document.querySelectorAll("[data-modal-close]").forEach(button => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal");
+      if (!modal) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    });
+  });
+})();

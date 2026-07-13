@@ -1,47 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
+(() => {
+  const items = [...document.querySelectorAll(".gallery-item")];
+  const lightbox = document.getElementById("lightbox");
+  const image = document.getElementById("lightboxImage");
+  if (!lightbox || !image || !items.length) return;
 
-    window.openLightbox = function(src){
+  const sources = items.map(item => item.querySelector("img").src);
+  let current = 0;
 
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
+  function show(index) {
+    current = (index + sources.length) % sources.length;
+    image.src = sources[current];
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
-        if(!lightbox || !lightboxImg) return;
+  function close() {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
 
-        lightboxImg.src = src;
-        lightbox.style.display = "flex";
-    }
-
-    window.closeLightbox = function(){
-
-        const lightbox = document.getElementById("lightbox");
-
-        if(!lightbox) return;
-
-        lightbox.style.display = "none";
-    }
-
-    if(typeof Swiper !== "undefined"){
-
-        new Swiper(".gallerySwiper",{
-
-            loop:true,
-
-            centeredSlides:true,
-
-            spaceBetween:18,
-
-            autoplay:{
-                delay:3000,
-                disableOnInteraction:false
-            },
-
-            pagination:{
-                el:".swiper-pagination",
-                clickable:true
-            }
-
-        });
-
-    }
-
-});
+  items.forEach((item, index) => item.addEventListener("click", () => show(index)));
+  lightbox.querySelector(".lightbox-close").addEventListener("click", close);
+  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => show(current - 1));
+  lightbox.querySelector(".lightbox-next").addEventListener("click", () => show(current + 1));
+  lightbox.addEventListener("click", e => { if (e.target === lightbox) close(); });
+  document.addEventListener("keydown", e => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+})();

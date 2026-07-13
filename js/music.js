@@ -1,25 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let isPlaying = false;
+(() => {
+  const audio = document.getElementById("bgMusic");
+  const button = document.getElementById("musicToggle");
+  if (!audio || !button) return;
 
-  window.toggleMusic = function () {
-    const bgm = document.getElementById("bgm");
-    const btn = document.getElementById("musicBtn");
-
-    if (!bgm || !btn) return;
-
-    bgm.volume = 0.5;
-
-    if (!isPlaying) {
-      bgm.play().then(() => {
-        btn.classList.add("playing");
-        isPlaying = true;
-      }).catch((error) => {
-        alert("음악 재생 실패: " + error.message);
-      });
-    } else {
-      bgm.pause();
-      btn.classList.remove("playing");
-      isPlaying = false;
+  button.addEventListener("click", async () => {
+    try {
+      if (audio.paused) {
+        await audio.play();
+        button.classList.add("playing");
+        button.setAttribute("aria-label", "배경음악 정지");
+      } else {
+        audio.pause();
+        button.classList.remove("playing");
+        button.setAttribute("aria-label", "배경음악 재생");
+      }
+    } catch (error) {
+      console.warn("음악 파일을 확인해 주세요.", error);
     }
-  };
-});
+  });
+})();
