@@ -1,5 +1,5 @@
 (() => {
-  const KAKAO_JAVASCRIPT_KEY = "b8ab2fa1e7602d86bb0e62ceb2d2d2a6";
+  const KAKAO_JAVASCRIPT_KEY = "7400414801fa68a6bec478724cb92a3b";
 
   const shareButton = document.getElementById("kakaoShare");
 
