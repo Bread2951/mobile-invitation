@@ -2,6 +2,12 @@
   const items = [...document.querySelectorAll(".gallery-item")];
   const lightbox = document.getElementById("lightbox");
   const image = document.getElementById("lightboxImage");
+
+  lightboxImage.setAttribute("draggable", "false");
+  lightboxImage.style.touchAction = "none";
+  lightboxImage.style.userSelect = "none";
+  lightboxImage.style.webkitUserDrag = "none";
+
   if (!lightbox || !image || !items.length) return;
 
   const sources = items.map(item => item.querySelector("img").src);

@@ -24,7 +24,15 @@
   background: rgba(0,0,0,.93);
 }
 .lightbox.open { display: flex; }
-.lightbox img { width: min(92vw, 700px); max-height: 84vh; object-fit: contain; }
+.lightbox img {
+  width: min(92vw, 700px);
+  max-height: 84vh;
+  object-fit: contain;
+
+  touch-action: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
 .lightbox button {
   position: absolute;
   border: 0;
@@ -33,6 +41,7 @@
   font-family: sans-serif;
   cursor: pointer;
 }
+
 .lightbox-close { top: 20px; right: 20px; font-size: 34px; }
 .lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); font-size: 46px; }
 .lightbox-prev { left: 14px; }
