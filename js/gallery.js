@@ -14,6 +14,7 @@
   let current = 0;
   let startX = 0;
   let endX = 0;
+  let lastTouchEnd = 0;
 
   function show(index) {
     current = (index + sources.length) % sources.length;
@@ -79,4 +80,35 @@ image.addEventListener("touchend", e => {
       buttonText.textContent = isExpanded ? "접기" : "더보기";
     }
   });
+
+  // 아이폰 Safari 핀치 확대 방지
+lightbox.addEventListener("touchmove", e => {
+  if (e.touches.length > 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// 아이폰 Safari 제스처 확대 방지
+lightbox.addEventListener("gesturestart", e => {
+  e.preventDefault();
+});
+
+lightbox.addEventListener("gesturechange", e => {
+  e.preventDefault();
+});
+
+lightbox.addEventListener("gestureend", e => {
+  e.preventDefault();
+});
+
+// 더블탭 확대 방지
+lightbox.addEventListener("touchend", e => {
+  const now = Date.now();
+
+  if (now - lastTouchEnd <= 300) {
+    e.preventDefault();
+  }
+
+  lastTouchEnd = now;
+}, { passive: false });
 })();
