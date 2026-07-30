@@ -162,25 +162,60 @@
 }
 
 /* =========================
-   INVITATION
+   INVITATION MESSAGE
 ========================= */
 
-.invitation {
-  background: var(--paper);
-}
-
-.flower-mark {
-  margin: 34px 0;
-  color: var(--accent);
+.invitation-message {
+  margin-top: 15px;
   text-align: center;
 }
 
-.invitation-text {
+.invitation-quote {
   margin: 0;
-  color: #655f59;
-  font-size: 15px;
+
+  font-family: var(--serif);
+  font-size: clamp(17px, 4.4vw, 20px);
+  font-weight: 600;
   line-height: 2;
-  text-align: center;
+
+  color: var(--text);
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+.invitation-author {
+  margin: 18px 0 0;
+
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 400;
+
+  color: var(--muted);
+  letter-spacing: -0.02em;
+}
+
+.invitation-divider {
+  display: block;
+
+  width: 1px;
+  height: 34px;
+
+  margin: 26px auto;
+
+  background: rgba(47, 43, 40, 0.22);
+}
+
+.invitation-description {
+  margin: 0;
+
+  font-family: var(--serif);
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: 400;
+  line-height: 1.9;
+
+  color: var(--muted);
+  letter-spacing: -0.025em;
+  word-break: keep-all;
 }
 
 .couple-line {
@@ -826,4 +861,14 @@ footer small {
     font-size: 8px;
     letter-spacing: 0.28em;
   }
+}
+
+.flower-mark {
+  width: 100%;
+  margin: 24px 0 38px;
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 1;
+  color: var(--accent);
 }
