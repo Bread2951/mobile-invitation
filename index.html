@@ -157,21 +157,69 @@
       </section>
 
       <!-- GALLERY -->
-      <section class="section gallery-section" id="gallery">
-        <div class="section-inner reveal">
-          <p class="section-kicker">GALLERY</p>
-          <h2 class="section-title">우리의 빛나는 순간</h2>
+<section class="section gallery-section reveal" id="gallery">
+  <div class="section-inner">
+    <p class="section-kicker">GALLERY</p>
+    <h2 class="section-title">우리의 빛나는 순간</h2>
 
-          <div class="gallery-grid">
-            <button class="gallery-item tall" data-index="0"><img src="images/gallery-01.jpg" alt="웨딩사진 1"></button>
-            <button class="gallery-item" data-index="1"><img src="images/gallery-02.jpg" alt="웨딩사진 2"></button>
-            <button class="gallery-item" data-index="2"><img src="images/gallery-03.jpg" alt="웨딩사진 3"></button>
-            <button class="gallery-item wide" data-index="3"><img src="images/gallery-04.jpg" alt="웨딩사진 4"></button>
-            <button class="gallery-item" data-index="4"><img src="images/gallery-05.jpg" alt="웨딩사진 5"></button>
-            <button class="gallery-item tall" data-index="5"><img src="images/gallery-06.jpg" alt="웨딩사진 6"></button>
-          </div>
-        </div>
-      </section>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- 처음 표시되는 9장 -->
+      <button class="gallery-item" type="button" data-index="0">
+        <img src="images/gallery-01.jpg" loading="lazy" alt="웨딩사진 1">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="1">
+        <img src="images/gallery-02.jpg" loading="lazy" alt="웨딩사진 2">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="2">
+        <img src="images/gallery-03.jpg" loading="lazy" alt="웨딩사진 3">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="3">
+        <img src="images/gallery-04.jpg" loading="lazy" alt="웨딩사진 4">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="4">
+        <img src="images/gallery-05.jpg" loading="lazy" alt="웨딩사진 5">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="5">
+        <img src="images/gallery-06.jpg" loading="lazy" alt="웨딩사진 6">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="6">
+        <img src="images/gallery-07.jpg" loading="lazy" alt="웨딩사진 7">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="7">
+        <img src="images/gallery-08.jpg" loading="lazy" alt="웨딩사진 8">
+      </button>
+
+      <button class="gallery-item" type="button" data-index="8">
+        <img src="images/gallery-09.jpg" loading="lazy" alt="웨딩사진 9">
+      </button>
+
+      <!-- 더보기로 표시되는 사진 -->
+      <button class="gallery-item gallery-extra" type="button" data-index="9">
+        <img src="images/gallery-10.jpg" loading="lazy" alt="웨딩사진 10">
+      </button>
+
+      <button class="gallery-item gallery-extra" type="button" data-index="10">
+        <img src="images/gallery-11.jpg" loading="lazy" alt="웨딩사진 11">
+      </button>
+
+      <button class="gallery-item gallery-extra" type="button" data-index="11">
+        <img src="images/gallery-12.jpg" loading="lazy" alt="웨딩사진 12">
+      </button>
+    </div>
+
+    <button class="gallery-more-btn" id="galleryMoreBtn" type="button">
+      <span>더보기</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </div>
+</section>
 
       <!-- CONTACT -->
       <section class="section contact-section" id="contact">

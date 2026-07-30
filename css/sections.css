@@ -357,42 +357,105 @@
   font-style: normal;
 }
 
-/* =========================
+/* ========================================
    GALLERY
-========================= */
+======================================== */
 
-.gallery-section {
-  background: var(--paper);
+.gallery-section{
+  background:#fff;
+  text-align:center;
+  overflow:hidden;
 }
 
-.gallery-grid {
-  margin-top: 44px;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 165px;
-  gap: 6px;
+.gallery-section .section-inner{
+  width:100%;
+  max-width:none;
+  padding-left:0;
+  padding-right:0;
 }
 
-.gallery-item {
-  padding: 0;
-  border: 0;
-  background: #ddd;
-  overflow: hidden;
-  cursor: pointer;
+.gallery-section .section-kicker,
+.gallery-section .section-title{
+  padding-left:24px;
+  padding-right:24px;
 }
 
-.gallery-item img {
-  height: 100%;
-  object-fit: cover;
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  width:100%;
+  margin-top:36px;
+  gap:2px;
+  background:#fff;
 }
 
-.gallery-item.tall {
-  grid-row: span 2;
+.gallery-item{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  padding:0;
+  border:0;
+  border-radius:0;
+  overflow:hidden;
+  background:#eee;
+  cursor:pointer;
+  appearance:none;
 }
 
-.gallery-item.wide {
-  grid-column: span 2;
+.gallery-item img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .35s ease;
+  -webkit-user-drag:none;
+  user-select:none;
+}
+
+.gallery-item:active img{
+  transform:scale(.97);
+}
+
+/* 처음에는 추가 사진 숨김 */
+.gallery-extra{
+  display:none;
+}
+
+/* 더보기 클릭 후 표시 */
+.gallery-grid.is-expanded .gallery-extra{
+  display:block;
+}
+
+.gallery-more-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin:38px auto 10px;
+  padding:12px 22px;
+  border:0;
+  background:transparent;
+  color:#3f3a36;
+  font-family:'Gowun Batang', serif;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.gallery-more-btn i{
+  font-size:12px;
+  transition:transform .3s ease;
+}
+
+.gallery-more-btn.is-open i{
+  transform:rotate(180deg);
+}
+
+@media (hover:hover){
+  .gallery-item:hover img{
+    transform:scale(1.04);
+  }
 }
 
 /* =========================

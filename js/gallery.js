@@ -33,3 +33,21 @@
     if (e.key === "ArrowRight") show(current + 1);
   });
 })();
+
+(() => {
+  const galleryGrid = document.getElementById("galleryGrid");
+  const galleryMoreBtn = document.getElementById("galleryMoreBtn");
+
+  if (!galleryGrid || !galleryMoreBtn) return;
+
+  galleryMoreBtn.addEventListener("click", () => {
+    const isExpanded = galleryGrid.classList.toggle("is-expanded");
+    const buttonText = galleryMoreBtn.querySelector("span");
+
+    galleryMoreBtn.classList.toggle("is-open", isExpanded);
+
+    if (buttonText) {
+      buttonText.textContent = isExpanded ? "접기" : "더보기";
+    }
+  });
+})();
