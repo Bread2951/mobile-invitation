@@ -12,6 +12,8 @@
 
   const sources = items.map(item => item.querySelector("img").src);
   let current = 0;
+  let startX = 0;
+  let endX = 0;
 
   function show(index) {
     current = (index + sources.length) % sources.length;
@@ -33,11 +35,32 @@
   lightbox.querySelector(".lightbox-next").addEventListener("click", () => show(current + 1));
   lightbox.addEventListener("click", e => { if (e.target === lightbox) close(); });
   document.addEventListener("keydown", e => {
-    if (!lightbox.classList.contains("open")) return;
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowLeft") show(current - 1);
-    if (e.key === "ArrowRight") show(current + 1);
-  });
+  if (!lightbox.classList.contains("open")) return;
+
+  if (e.key === "Escape") close();
+  if (e.key === "ArrowLeft") show(current - 1);
+  if (e.key === "ArrowRight") show(current + 1);
+});
+
+image.addEventListener("touchstart", e => {
+  startX = e.changedTouches[0].clientX;
+}, { passive: true });
+
+image.addEventListener("touchend", e => {
+  endX = e.changedTouches[0].clientX;
+
+  const distance = endX - startX;
+  const threshold = 50;
+
+  if (distance < -threshold) {
+    show(current + 1);
+  }
+
+  if (distance > threshold) {
+    show(current - 1);
+  }
+}, { passive: true });
+
 })();
 
 (() => {
