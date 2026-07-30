@@ -25,7 +25,7 @@
           "2026년 9월 20일 오전 11시 · 광명무역센터컨벤션",
 
         imageUrl:
-          new URL("images/og-image.jpg", window.location.href).href,
+          new URL("images/og-image-v2.jpg", window.location.href).href,
 
         link: {
           mobileWebUrl: window.location.href,
