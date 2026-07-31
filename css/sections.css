@@ -595,29 +595,19 @@
   margin: 11px 0 0;
 }
 
-.map-placeholder {
+.google-map {
   margin-top: 30px;
   height: 260px;
-
-  display: grid;
-  place-items: center;
-
-  background:
-    linear-gradient(135deg, rgba(159, 128, 112, 0.10), rgba(255, 255, 255, 0.5)),
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(0, 0, 0, 0.035) 32px),
-    repeating-linear-gradient(90deg, transparent 0 31px, rgba(0, 0, 0, 0.035) 32px);
-
-  text-align: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f3f0ec;
 }
 
-.map-placeholder div {
-  display: grid;
-  gap: 7px;
-}
-
-.map-pin {
-  color: var(--accent);
-  font-size: 28px;
+.google-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .map-buttons {
@@ -871,4 +861,88 @@ footer small {
   font-size: 18px;
   line-height: 1;
   color: var(--accent);
+}
+
+/* =========================
+   TRANSPORT INFO
+========================= */
+
+.transport-info {
+  margin-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.transport-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.transport-title {
+  margin: 0 0 16px;
+
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.transport-content {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.transport-content p {
+  margin: 0;
+}
+
+.transport-content strong {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.walk-time {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.bus-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bus-list li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.bus-list li span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.transport-label {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.transport-address-label {
+  margin-top: 16px;
+}
+
+.transport-sub {
+  font-size: 13px;
 }
