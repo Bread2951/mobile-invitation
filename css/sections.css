@@ -251,7 +251,7 @@
 }
 
 .invitation {
-  padding-bottom: 32px;
+  padding-bottom: 45px;
 }
 
 /* =========================
@@ -873,11 +873,13 @@ footer small {
 
 .transport-info {
   margin-top: 44px;
-  border-top: 1px solid var(--line);
 }
 
 .transport-item {
   padding: 28px 0;
+}
+
+.transport-item:not(:last-child) {
   border-bottom: 1px solid var(--line);
 }
 
