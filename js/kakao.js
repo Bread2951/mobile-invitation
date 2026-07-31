@@ -2,8 +2,7 @@
   const KAKAO_JAVASCRIPT_KEY = "7400414801fa68a6bec478724cb92a3b";
 
   const shareButton = document.getElementById("kakaoShare");
-
-  if (!shareButton) return;
+  const floatingShare = document.getElementById("floatingShare");
 
   if (!window.Kakao) {
     console.error("카카오 JavaScript SDK를 불러오지 못했습니다.");
@@ -14,7 +13,7 @@
     Kakao.init(KAKAO_JAVASCRIPT_KEY);
   }
 
-  shareButton.addEventListener("click", () => {
+  function shareKakao() {
     Kakao.Share.sendDefault({
       objectType: "feed",
 
@@ -44,5 +43,13 @@
         }
       ]
     });
-  });
+  }
+
+  if (shareButton) {
+    shareButton.addEventListener("click", shareKakao);
+  }
+
+  if (floatingShare) {
+    floatingShare.addEventListener("click", shareKakao);
+  }
 })();
