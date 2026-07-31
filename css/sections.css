@@ -250,12 +250,16 @@
   font-size: 11px;
 }
 
+.invitation {
+  padding-bottom: 32px;
+}
+
 /* =========================
    PORTRAIT
 ========================= */
 
 .portrait-section {
-  padding-top: 0;
+  padding: 24px 28px 104px;
   background: var(--paper);
 }
 
